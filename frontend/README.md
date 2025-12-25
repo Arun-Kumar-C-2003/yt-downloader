@@ -5,14 +5,15 @@
    ```bash
    git clone https://github.com/your-username/yt-downloader.git
    cd yt-downloader/frontend
-Install dependencies:
 
-bash
-Copy code
-pnpm install
-Start the development server:
+2. Install dependencies:
 
-bash
-Copy code
-pnpm dev
+```bash
+    pnpm install
+```
+
+3. Start the development server:
+ ```bash
+    pnpm dev
+```
 Your frontend should now be running at http://localhost:5173.

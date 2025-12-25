@@ -39,56 +39,59 @@ A simple YouTube downloader application that lets users download videos in **MP4
    ```bash
    git clone https://github.com/your-username/yt-downloader.git
    cd yt-downloader/frontend
-Install dependencies:
 
-bash
-Copy code
-pnpm install
-Start the development server:
+2. Install dependencies:
 
-bash
-Copy code
-pnpm dev
+```bash
+    pnpm install
+```
+
+3. Start the development server:
+ ```bash
+    pnpm dev
+```
 Your frontend should now be running at http://localhost:5173.
 
 ### **Backend (Flask + yt-dlp + FFmpeg)**
 
-Navigate to the backend directory:
+4. Navigate to the backend directory:
 
-bash
-Copy code
+```bash
 cd yt-downloader/backend
-Create a virtual environment:
+```
 
-bash
-Copy code
+5. Create a virtual environment:
+
+```bash
 python -m venv venv
 Activate the virtual environment:
+```
 
 Windows:
 
-bash
-Copy code
+```bash
 venv\Scripts\activate
+```
 
 Linux/macOS:
 
-bash
-Copy code
+```bash
 source venv/bin/activate
 Install the required dependencies:
+```
 
-bash
-Copy code
+```bash
 pip install -r requirements.txt
-Run the Flask application with Gunicorn:
+```
+6. Run the Flask application :
 
-bash
-Copy code
+```bash
 python app.py
+```
+
 Your backend should now be running at http://localhost:5000.
 
-Usage
+**Usage**
 Open the frontend in your browser (http://localhost:5173).
 
 Paste a YouTube video URL into the input field.
@@ -124,3 +127,5 @@ Flask: A lightweight web framework for Python.
 yt-dlp: A YouTube video downloader to extract metadata and download content.
 
 FFmpeg: A tool to handle media files, such as converting audio and video formats.
+
+Under the MIT License - see the [LICENSE](LICENSE) file for details.

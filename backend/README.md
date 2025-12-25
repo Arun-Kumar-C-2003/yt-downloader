@@ -1,36 +1,38 @@
 ### **Backend (Flask + yt-dlp + FFmpeg)**
 
-Navigate to the backend directory:
+1. Navigate to the backend directory:
 
-bash
-Copy code
+```bash
 cd yt-downloader/backend
-Create a virtual environment:
+```
 
-bash
-Copy code
+2. Create a virtual environment:
+
+```bash
 python -m venv venv
 Activate the virtual environment:
+```
 
 Windows:
 
-bash
-Copy code
+```bash
 venv\Scripts\activate
+```
 
 Linux/macOS:
 
-bash
-Copy code
+```bash
 source venv/bin/activate
 Install the required dependencies:
+```
 
-bash
-Copy code
+```bash
 pip install -r requirements.txt
-Run the Flask application with Gunicorn:
+```
+3. Run the Flask application :
 
-bash
-Copy code
+```bash
 python app.py
+```
+
 Your backend should now be running at http://localhost:5000.
