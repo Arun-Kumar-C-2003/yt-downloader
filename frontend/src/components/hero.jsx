@@ -29,7 +29,7 @@ export default function HeroSection() {
     if (!url) return;
     setLoader(true);
     try {
-      const res = await fetch(`${BASE_URL}/api/metadata`, {
+      const res = await fetch(`/api/metadata`, {
         headers: { "Content-Type": "application/json" },
         method: "POST",
         body: JSON.stringify({ url: url }),

@@ -5,7 +5,7 @@ const BASE_URL = import.meta.env.VITE_BASE_URL;
 const downloadVideo = async (url, title, setVideoLoader) => {
   setVideoLoader(true);
   try {
-    const res = await fetch(`${BASE_URL}/api/download/video`, {
+    const res = await fetch(`/api/download/video`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -36,7 +36,7 @@ const downloadVideo = async (url, title, setVideoLoader) => {
 const downloadAudio = async (url, title, setAudioLoader) => {
   setAudioLoader(true);
   try {
-    const res = await fetch(`${BASE_URL}/api/download/audio`, {
+    const res = await fetch(`/api/download/audio`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

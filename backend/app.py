@@ -10,13 +10,22 @@ from cli.downloader import extract_metadata, download_audio, download_video, tem
 app = Flask(__name__)
 load_dotenv()
 CORS_BASE_URL = os.getenv("CORS_BASE_URL")
-CORS(app, resources={r"/*": {"origins": f"{CORS_BASE_URL}"}})
-
+CORS(
+    app,
+    resources={r"/api/*": {"origins": CORS_BASE_URL}}, 
+    supports_credentials=True
+)
+@app.route("/api/metadata", methods=["POST"])
 @app.route("/api/metadata", methods=["POST"])
 def metadata():
-    url = request.json["url"]
-    data = extract_metadata(url)
-    return jsonify(data)
+    try:
+        url = request.json["url"]
+        data = extract_metadata(url)
+        return jsonify(data)
+    except Exception as e:
+        print("ERROR:", e)
+        return jsonify({"error": str(e)}), 500
+
 
 @app.route("/api/download/video", methods=["POST"])
 def download_video_route():
@@ -71,4 +80,4 @@ def download_audio_route():
     return response
 
 if __name__ ==  "__main__":
-    app.run()
+    app.run(debug=True)
